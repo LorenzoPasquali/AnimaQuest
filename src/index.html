@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AnimaQuest Academy</title>
+  <!-- Favicon -->
+  <link href="dist/style.css" rel="stylesheet">
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* Estilo para o gradiente de texto */
+    .text-gradient {
+      background: linear-gradient(to bottom, #434190, #4c51bf, #6b46c1, #4616b4);
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    /* Fundo contínuo, roxo à direita e cinza à esquerda */
+    .main-bg {
+      background: linear-gradient(to right, #d1d6df 58%, #434190 42%);
+    }
+
+    /* Fonte personalizada para Poppins */
+    .font-poppins {
+      font-family: 'Poppins', sans-serif;
+    }
+
+    /* Tarja de blur para o header */
+    .header-blur {
+      backdrop-filter: blur(20px);
+      background-color: rgba(255, 255, 255, 0.1);
+      height: 85px;
+      width: 100%;
+      transition: top 0.3s ease;
+    }
+
+    /* Ajuste para tornar o header fixo no topo */
+    .header-container {
+      position: fixed; /* Torna o header fixo no topo */
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 10;
+    }
+
+    /* Ajuste no logo para que ele fique maior sem aumentar o container */
+    .logo {
+      max-width: 300px;
+      height: auto;
+    }
+
+    /* Fundo para o terceiro setor */
+    .third-section-bg {
+        background: linear-gradient(to bottom, #d1d6df, #a8b0bd, #6440b9 ); /* Cinza */
+    }
+
+    /* Ajuste no fundo da quarta seção, continuando o gradiente */
+    .fourth-section-bg {
+      background: linear-gradient(to bottom, #6440b9, #6b46c1, #434190); /* Continuando o roxo */
+    }
+
+    /* Estilo para os círculos amarelos ao lado dos itens */
+    .circle-number {
+      width: 40px;
+      height: 40px;
+      background-color: #f5b548; /* Cor amarela */
+      color: #4d0aeb; /* Cor do texto */ 
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 60%;
+      font-weight: bold;
+      font-size: 16px;
+    }
+    
+    html {
+    scroll-behavior: smooth;
+}
+  </style>
+</head>
+<body class="overflow-x-hidden main-bg font-poppins">
+
+ <!-- Header com efeito de blur e botões de navegação -->
+<div class="header-container" id="header-container">
+  <div class="header-blur px-5 py-3 flex items-center justify-between">
+    <!-- Logo -->
+    <img src="images/logo.png" alt="Logo" class="logo object-contain">
+    
+    <!-- Navegação -->
+    <nav class="flex gap-12 mr-4">
+      <a href="#inicio" class="text-white font-bold text-xl hover:text-purple-500 transition">Início</a>
+      <a href="#estrutura" class="text-white font-bold text-xl hover:text-purple-500 transition">Estrutura</a>
+      <a href="#software" class="text-white font-bold text-xl hover:text-purple-500 transition">Software</a>
+      <a href="#beneficios" class="text-white font-bold text-xl hover:text-purple-500 transition">Benefícios</a>
+      <a href="#contato" class="text-white font-bold text-xl hover:text-purple-500 transition">Contato</a>
+    </nav>
+  </div>
+</div>
+
+  <!-- Primeira Seção (Logo, título e astronauta) -->
+  <div id="inicio" class="w-full h-screen flex pt-20">
+    <!-- Seção Esquerda (Cinza) com título -->
+    <div class="w-[55%] flex items-center justify-center pl-16 relative" data-aos="fade-up" data-aos-duration="2000">
+      <div class="mt-48" >
+        <h1 class="text-8xl font-bold text-gradient text-center leading-[1.2] tracking-2">
+          Introdução ao<br>Mundo 3D
+        </h1>
+      </div>
+    </div>
+
+    <!-- Seção Direita (Roxa) com imagem do astronauta -->
+    <div class="w-[45%] flex items-center justify-center relative" data-aos="fade-left" data-aos-duration="2000">
+      <img src="images/astronauta.png" alt="Astronauta" class="absolute top-10 right-14 mx-auto object-contain w-[100%] h-auto max-h-[100%]">
+    </div>
+  </div>
+
+  <!-- Segunda Seção (Texto "Estrutura") -->
+  <div id="estrutura" class="w-full h-screen flex pt-28">
+    <!-- Parte Cinza com título e texto justificado -->
+    <div class="w-[55%] flex flex-col items-center pt-10 mt-14" data-aos="fade-up" data-aos-duration="2000">
+      <h2 class="text-8xl font-bold text-gradient mb-10" data-aos="fade-up" data-aos-duration="2000">Estrutura</h2>
+      <div class="text-center max-w-2xl mx-auto">
+        <p class="text-gray-700 text-2xl font-semibold text-justify break-words mb-10" data-aos="fade-up" data-aos-duration="2000">
+          Após anos em contato com o mundo 3D e o ensino infantil, desenvolvi aulas dinâmicas, práticas e envolventes, com o objetivo de introduzir o mundo tridimensional para crianças, organizadas por temas: <strong class="font-bold">Introdução ao 3D, Modelagem, Refinamento, UVs, Texturização, Iluminação, Animação e Renderização</strong>. Cada aula começará com uma breve explicação do conteúdo do dia, seguida de uma prática guiada passo a passo. No final, cada aluno terá um tempo dedicado para aplicar livremente o que aprendeu, explorando sua criatividade com os conceitos estudados.
+        </p>
+      </div>
+    </div>
+
+    <!-- Parte Roxa com imagem Estrutura -->
+    <div class="w-[45%] flex items-center justify-center relative" data-aos="fade-left" data-aos-duration="1500">
+      <img src="images/estrutura.png" alt="Estrutura" class="absolute bottom-12 right-20 mx-auto object-contain w-[100%] h-auto max-h-[100%]">
+    </div>
+  </div>
+
+  <!-- Terceira Seção (Com fundo cinza) -->
+  <div id="software" class="w-full h-screen flex third-section-bg pt-20">
+    <!-- Conteúdo da terceira seção, ajustando conforme a necessidade -->
+    <div class="w-full flex flex-col items-center justify-center" data-aos="fade-up" data-aos-duration="1000">
+      <h2 class="text-8xl font-bold text-gradient mb-16" data-aos="fade-up" data-aos-duration="2000">
+        <span>Software:</span > 
+        <span class="text-yellow-400 inline-flex items-center">
+          Autodesk Maya 
+          <img src="images/maya.PNG" alt="Logo Maya" class="ml-2 w-32 h-auto"> <!-- Logo ao lado do texto -->
+        </span>
+      </h2>
+      <p class="text-3xl text-justify text-gray-700 mb-10 max-w-7xl mx-auto" data-aos="fade-up" data-aos-duration="2000">
+        O mercado de produção tridimensional cresce exponencialmente, abrangendo áreas que vão desde filmes e jogos até publicidade, design arquitetônico e industrial. 
+        O <span class="font-semibold">Autodesk Maya</span> é atualmente o software mais utilizado na indústria 3D, oferecendo uma gama completa de recursos que atende às demandas de grandes produções, especialmente no setor cinematográfico, sendo utilizado em produções icônicas como 
+        <span class="font-bold">Toy Story</span>, 
+        <span class="font-bold">Shrek</span> e, mais recentemente, 
+        <span class="font-bold">Robô Selvagem</span>. 
+        Embora não seja a ferramenta mais indicada para o desenvolvimento de jogos, o Maya proporciona uma base essencial para a compreensão e domínio do universo tridimensional, sendo a escolha perfeita para este projeto.
+      </p>
+    </div>
+  </div>
+
+<!-- Quarta Seção (Com fundo roxo contínuo) -->
+<div id="beneficios" class="w-full h-screen flex fourth-section-bg pt-20 relative">
+  <!-- Conteúdo da quarta seção -->
+  <div class="w-full flex flex-col items-start justify-center text-white">
+    <!-- Título no canto superior esquerdo -->
+    <h2 class="text-8xl font-bold mb-32 pl-12" data-aos="fade-up" data-aos-duration="2000">
+      Benefícios<span> do Curso</span>
+    </h2>
+    
+    <!-- Divisão dos pontos em duas colunas -->
+    <div class="flex w-full justify-center" data-aos="fade-up" data-aos-duration="1000">
+      <div class="w-1/2 flex flex-col items-start ml-8"> <!-- Ajuste de margem aqui -->
+        <ul class="text-4xl font-semibold">
+          <li class="flex items-start mb-8">
+            <div class="circle-number text-3xl w-16 h-16 mb-4">1</div>
+            <span class="ml-6 block text-left">Desenvolvimento Cognitivo <br> e da Criatividade</span>
+          </li>
+          <li class="flex items-start mb-8">
+            <div class="circle-number text-3xl w-16 h-16 mb-4">2</div>
+            <span class="ml-6 block text-left">Resolução de Problemas <br> e Pensamento Lógico</span>
+          </li>
+          <li class="flex items-start mb-8">
+            <div class="circle-number text-3xl w-16 h-16 mb-4">3</div>
+            <span class="ml-6 block text-left">Coordenação e Habilidades <br> Motoras Finas</span>
+          </li>
+          <li class="flex items-start mb-8">
+            <div class="circle-number text-3xl w-16 h-16 mb-4">4</div>
+            <span class="ml-6 block text-left">Desenvolvimento da <br> Autoconfiança</span>
+          </li>
+        </ul>
+      </div>
+      <div class="w-1/2 flex flex-col items-start -ml-10"> <!-- Ajuste de margem aqui -->
+        <ul class="text-4xl font-semibold -ml-28">
+          <li class="flex items-start mb-8">
+            <div class="circle-number text-3xl w-16 h-16 mb-4">5</div>
+            <span class="ml-6 block text-left">Iniciação à Tecnologia <br> e ao Design</span>
+          </li>
+          <li class="flex items-start mb-8">
+            <div class="circle-number text-3xl w-16 h-16 mb-4">6</div>
+            <span class="ml-6 block text-left">Trabalho em Projetos <br> e Organização</span>
+          </li>
+          <li class="flex items-start mb-8">
+            <div class="circle-number text-3xl w-16 h-16 mb-4">7</div>
+            <span class="ml-6 block text-left">Introdução à <br> Geometria</span>
+          </li>
+          <li class="flex items-start mb-8">
+            <div class="circle-number text-3xl w-16 h-16 mb-4">8</div>
+            <span class="ml-6 block text-left">Fomento ao Interesse por <br> STEM (Ciência, Tecnologia, <br>Engenharia e Matemática)</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Imagem da Nave - Aparece somente na quarta seção -->
+  <img src="images/foguete.png" alt="Imagem Nave" class="absolute -right-28 -top- w-1/3 lg:w-1/4 xl:w-1/3" data-aos="fade-left" data-aos-duration="2000" />
+</div>
+
+<!-- Última Seção (Contato) -->
+<div id="contato" class="w-full py-16" style="background-color: #d1d6df;">
+  <div class="max-w-7xl mx-auto px-4 text-center">
+    <h2 class="text-6xl font-bold tracking-wider mb-16" style="color: #6440b9;" data-aos="fade-up" data-aos-duration="1000">Contato</h2>
+    <div class="text-3xl text-gray-700 font-semibold tracking-wider flex flex-col items-center" data-aos="fade-up" data-aos-duration="1000">
+      <p class="mb-20 flex items-center justify-start w-full max-w-lg" data-aos="fade-up" data-aos-duration="1000">
+        <img src="images/phone.png" alt="Telefone" class="mr-6" style="width: 2rem; transform: scale(1.5);"> <!-- Ícone do telefone -->
+        <a href="tel:+5554996424202" class="hover:text-[#6440b9] transition duration-300">
+          54 99642-4202
+        </a>
+      </p>
+      <p class="mb-20 flex items-center justify-start w-full max-w-lg" data-aos="fade-up" data-aos-duration="1000">
+        <img src="images/mail.png" alt="Email" class="mr-6" style="width: 2rem; transform: scale(1.5);"> <!-- Ícone de email -->
+        <a target="_blank" href="mailto:amandarezler@gmail.com" class="hover:text-[#6440b9] transition duration-300">
+          amandarezler@gmail.com
+        </a>
+      </p>
+      <p class="mb-20 flex items-center justify-start w-full max-w-lg" data-aos="fade-up" data-aos-duration="1000">
+        <img src="images/web.png" alt="ArtStation" class="mr-6" style="width: 2rem; transform: scale(1.5);"> <!-- Ícone do ArtStation -->
+        <a href="https://amanda_rezler.artstation.com" target="_blank" class="hover:text-[#6440b9] transition duration-300">
+          amanda_rezler.artstation.com
+        </a>
+      </p>
+    </div>
+  </div>
+</div>
+
+  <!-- AOS Animation Library -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script>
+    AOS.init();
+
+    // Detecta rolagem para ocultar o header após a primeira seção
+    window.addEventListener('scroll', function() {
+      const header = document.getElementById('header-container');
+      if (window.scrollY > window.innerHeight) {
+        header.classList.add('header-hidden'); // Oculta o header quando a rolagem ultrapassa a primeira seção
+      } else {
+        header.classList.remove('header-hidden'); // Exibe o header novamente quando voltar para a primeira seção
+      }
+    });
+  </script>
+
+
+</body>
+</html>
